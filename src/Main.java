@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            OthelloModel model = new OthelloModel();
+            OthelloView view = new OthelloView();
+            new OthelloController(model, view);
+        });
     }
 }
